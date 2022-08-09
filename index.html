@@ -9,22 +9,38 @@
    </head>
 
    <body>
-		<header class="header">
-			<div class="header__container container">
-				<div class="header__logo"></div>
-				<div class="header__rest"></div>
-				<div class="header__menu menu">
-					<nav class="nav">
-						<ul class="nav__list">
-							<li><a href="" class="nav__link"></a></li>
-							<li><a href="" class="nav__link"></a></li>
-							<li><a href="" class="nav__link"></a></li>
-							<li><a href="" class="nav__link"></a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
-		
-	</body>
+      <header class="header">
+         <div class="header__container container">
+            <div class="header__logo">
+               <a href="index.html">
+                  <img src="img/header/logo-part_1.svg" alt="Логотип" />
+                  <img src="img/header/logo-part_2.svg" alt="Логотип" />
+               </a>
+            </div>
+            <div class="header__menu menu">
+               <nav class="nav">
+                  <ul class="nav__list">
+                     <li><a href="#" class="nav__link">Product</a></li>
+                     <li><a href="#" class="nav__link">Resources</a></li>
+                     <li><a href="#" class="nav__link">Support</a></li>
+                     <li><a href="#" class="nav__link">About</a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="header__rest rest-items">
+               <a href="#" class="rest-items__search">
+						<img src="img/header/icon.svg" alt="Иконка" />
+						<img src="img/header/iconHover.svg" alt="Иконка" />
+					</a>
+               <a href="#" class="rest-items__button" data-da=".nav__list,620,last">Schedule Demo</a>
+               <div class="burger">
+                  <span class="burger__icon"></span>
+               </div>
+            </div>
+         </div>
+      </header>
+
+		<script src="js/dynamicAdapt.js"></script>
+		<script src="js/script.js"></script>
+   </body>
 </html>

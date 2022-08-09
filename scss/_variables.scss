@@ -1,0 +1,41 @@
+// ! VARIABLES
+$container: 1250;
+$primary: #40494d;
+$black: #000;
+$smallLaptop: 1024px;
+$biggestTablet: 992px;
+$tablet: 767px;
+$bigPhone: 425px;
+$mediumPhone: 375px;
+$smallPhone: 320px;
+$foldPhone: 280px;
+
+// ! FUNCTIONS
+@mixin adaptiv-font($computerSize, $mobileSize) {
+   $addSize: $computerSize - $mobileSize;
+   $maxWidth: $container - 320;
+   font-size: calc(#{$mobileSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+// font-size: calc(24px + 16 * ((100vw - 320px) / (1280 - 320))); CSS
+
+// ! MIXINS
+@mixin flex($y, $x) {
+   display: flex;
+   align-items: $y;
+   justify-content: $x;
+}
+
+@mixin main-button($paddingForY, $paddingForX) {
+   font-size: 1rem;
+   color: #fff;
+   background: #283337;
+   border-radius: 56px;
+   padding: $paddingForY $paddingForX;
+   transition: background-color 400ms ease-in, color 200ms ease-in;
+   @media (min-width: $tablet) {
+      &:hover {
+         color: #283337;
+         background: #61d7ac;
+      }
+   }
+}
