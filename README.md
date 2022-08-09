@@ -6,4 +6,4 @@
 	* My teacher's develompent 'Dynamic-Adaptive'
 	* Own scripts
 
-In <main></main> I can use a lot of <em>JavaScript</em> code 
+In <code>main part</code> of site I can use a lot of <em>JavaScript</em> code 
