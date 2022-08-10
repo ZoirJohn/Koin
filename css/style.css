@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +19,7 @@ body,
 .wrapper {
   width: 100%;
   height: 100%;
-  font-family: "Arial";
+  font-family: "Manrope", sans-serif;
 }
 
 .body.lock_ {
@@ -100,6 +101,11 @@ body,
 }
 .header__logo a img:first-child {
   margin: 0 11px 0 0;
+}
+@media (max-width: 300px) {
+  .header__logo a img:last-child {
+    display: none;
+  }
 }
 .header__menu {
   -webkit-box-flex: 1;
@@ -193,17 +199,17 @@ body,
     z-index: 1;
     background: #40494d;
     left: 0;
-    top: 0;
+    top: -70px;
     -webkit-transform: translate(0, -100%);
             transform: translate(0, -100%);
     -webkit-transition: all 400ms ease-in-out;
     transition: all 400ms ease-in-out;
     padding: 0 0 70px 0;
+    overflow: auto;
   }
   .menu.open_ {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    overflow: auto;
     top: 70px;
   }
   .menu .nav__list {
@@ -330,10 +336,8 @@ body,
   }
   .burger__icon {
     top: 50%;
-    right: 0;
-    margin: 0 auto;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
+    -webkit-transform: scale(1) translate(0, -50%);
+            transform: scale(1) translate(0, -50%);
   }
   .burger::before {
     top: 0;
@@ -342,7 +346,8 @@ body,
     bottom: 0;
   }
   .burger.cross_ .burger__icon {
-    width: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   .burger.cross_::before {
     top: 50%;
