@@ -3,6 +3,7 @@
    height: 120px;
    background: #fff;
    position: fixed;
+	z-index: 3;
    &__container {
       max-width: 1310px;
       @include flex(center, space-between);

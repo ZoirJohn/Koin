@@ -35,7 +35,21 @@ body,
    padding: 0 15px;
 }
 
-// ::-webkit-scrollbar
+::-webkit-scrollbar {
+	background: #f3f7f4;
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $primary;
+	border-radius: 50px;
+}
+
+*::selection {
+	background: $primary;
+	color: #fff;
+}
+
 @import 'header.scss';
 @import 'main.scss';
 @import 'footer.scss';

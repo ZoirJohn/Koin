@@ -1,7 +1,9 @@
 // ! VARIABLES
 $container: 1250;
 $primary: #40494d;
+$secondary: #283337;
 $black: #000;
+
 $smallLaptop: 1024px;
 $biggestTablet: 992px;
 $tablet: 767px;
@@ -26,12 +28,13 @@ $foldPhone: 280px;
 }
 
 @mixin main-button($paddingForY, $paddingForX) {
+	display: inline-block;
    font-size: 1rem;
    color: #fff;
-   background: #283337;
+   background: $secondary;
    border-radius: 56px;
    padding: $paddingForY $paddingForX;
-   transition: background-color 400ms ease-in, color 200ms ease-in;
+   transition: background-color 300ms ease-in, color 200ms ease-in;
    @media (min-width: $tablet) {
       &:hover {
          color: #283337;

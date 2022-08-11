@@ -9,38 +9,73 @@
    </head>
 
    <body>
-      <header class="header">
-         <div class="header__container container">
-            <div class="header__logo">
-               <a href="index.html">
-                  <img src="img/header/logo-part_1.svg" alt="Логотип" />
-                  <img src="img/header/logo-part_2.svg" alt="Логотип" />
-               </a>
-            </div>
-            <div class="header__menu menu">
-               <nav class="nav">
-                  <ul class="nav__list">
-                     <li><a href="#" class="nav__link">Product</a></li>
-                     <li><a href="#" class="nav__link">Resources</a></li>
-                     <li><a href="#" class="nav__link">Support</a></li>
-                     <li><a href="#" class="nav__link">About</a></li>
-                  </ul>
-               </nav>
-            </div>
-            <div class="header__rest rest-items">
-               <a href="#" class="rest-items__search">
-						<img src="img/header/icon.svg" alt="Иконка" />
-						<img src="img/header/iconHover.svg" alt="Иконка" />
-					</a>
-               <a href="#" class="rest-items__button" data-da=".nav__list,620,last">Schedule Demo</a>
-               <div class="burger">
-                  <span class="burger__icon"></span>
+      <div class="wrapper">
+         <header class="header">
+            <div class="header__container container">
+               <div class="header__logo">
+                  <a href="index.html">
+                     <img src="img/header/logo-part_1.svg" alt="Логотип" />
+                     <img src="img/header/logo-part_2.svg" alt="Логотип" />
+                  </a>
+               </div>
+               <div class="header__menu menu">
+                  <nav class="nav">
+                     <ul class="nav__list">
+                        <li><a href="#" class="nav__link">Product</a></li>
+                        <li><a href="#" class="nav__link">Resources</a></li>
+                        <li><a href="#" class="nav__link">Support</a></li>
+                        <li><a href="#" class="nav__link">About</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="header__rest rest-items">
+                  <a href="#" class="rest-items__search">
+                     <img src="img/header/icon.svg" alt="Иконка" />
+                     <img src="img/header/iconHover.svg" alt="Иконка" />
+                  </a>
+                  <a href="#" class="rest-items__button" data-da=".nav__list,620,last">Schedule Demo</a>
+                  <div class="burger">
+                     <span class="burger__icon"></span>
+                  </div>
                </div>
             </div>
-         </div>
-      </header>
+         </header>
 
-		<script src="js/dynamicAdapt.js"></script>
-		<script src="js/script.js"></script>
+         <main class="main">
+            <section class="poster">
+               <div class="container poster__container">
+                  <div class="poster__body body-poster">
+                     <div class="body-poster__description">
+                        <h1 class="header-block">Complete cloud enablement has arrived.</h1>
+                     </div>
+                     <div class="body-poster__text">
+                        <p>Oversee, secure, and scale your cloud with one solution.</p>
+                     </div>
+                     <div class="body-poster__box">
+                        <a href="#">Request Demo</a>
+                     </div>
+                  </div>
+                  <div class="poster__img">
+							<div class="decor-img"><img src="img/poster/poster-img.png" alt="Фон"></div>
+							<div class="decor-1"><img src="img/poster/decor-1.png" alt=""></div>
+							<div class="decor-2"><img src="img/poster/decor-2.png" alt=""></div>
+							<div class="decor-3"><img src="img/poster/decor-3.png" alt=""></div>
+						</div>
+               </div>
+					<div class="container poster-icons__container">
+						<div class="poster-icons__body">
+							<div class="poster-icons__icon" id="i-1"></div>
+							<div class="poster-icons__icon" id="i-2"></div>
+							<div class="poster-icons__icon" id="i-3"></div>
+							<div class="poster-icons__icon" id="i-4"></div>
+							<div class="poster-icons__icon" id="i-5"></div>
+						</div>
+					</div>
+            </section>
+         </main>
+      </div>
+
+      <script src="js/dynamicAdapt.js"></script>
+      <script src="js/script.js"></script>
    </body>
 </html>
