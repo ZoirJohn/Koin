@@ -310,3 +310,65 @@
       }
    }
 }
+
+// Контент сайта Results //
+.results {
+   background: $grey;
+   padding: 150px 0 70px;
+   &__container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      > div {
+         text-align: center;
+      }
+      @media (max-width: $tablet) {
+         grid-template-columns: repeat(2, 1fr);
+         justify-self: center;
+      }
+      @media (max-width: $bigPhone) {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__header {
+      grid-column: 1 / span 3;
+      @media (max-width: $tablet) {
+         grid-column: 1 / span 2;
+      }
+      @media (max-width: $bigPhone) {
+         grid-column: 1/2;
+      }
+   }
+
+   &__square {
+      padding: 80px 0;
+      h1 {
+         font-weight: 400;
+         font-size: 2.8rem;
+         line-height: 70px/52px * 100%;
+         color: $secondary;
+         padding: 0 0 0.4em 0;
+      }
+      p {
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 24px/16px * 100%;
+         color: $primary;
+         width: 51%;
+         margin: 0 auto;
+      }
+      @media (max-width: $biggestTablet) {
+         padding: 40px 20px 0;
+         p {
+            width: 100%;
+         }
+      }
+   }
+   @media (max-width: $smallLaptop) {
+      padding: 100px 0;
+   }
+   @media (max-width: $biggestTablet) {
+      padding: 75px 0;
+   }
+}
