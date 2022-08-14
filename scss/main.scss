@@ -10,7 +10,7 @@
 // Контент сайта Poster //
 .poster {
    width: 100%;
-   background: #f3f7f4;
+   background: $grey;
    &__container {
       position: relative;
       @include flex(start, space-between);
@@ -92,7 +92,7 @@
             content: '';
             width: 100%;
             height: 100%;
-            background: #ffffffce;
+            background: #f3f7f4dd;
             position: absolute;
             left: 0;
             top: 0;
@@ -149,10 +149,10 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       @media (max-width: 768px) {
-         grid-template-columns: repeat(3,1fr);
+         grid-template-columns: repeat(3, 1fr);
       }
       @media (max-width: 425px) {
-         grid-template-columns: repeat(2,1fr);
+         grid-template-columns: repeat(2, 1fr);
       }
       @media (max-width: 375px) {
          grid-template-columns: 1fr;
@@ -186,4 +186,127 @@
 
 #i-5 {
    background: url(../img/poster/icons/poster-icon_1.svg) center/ calc(143 / 244 * 100%) 100px no-repeat;
+}
+
+// Контент сайта Poster //
+.product {
+   background: #fff;
+
+   &__container {
+      padding-top: 75px;
+      padding-bottom: 75px;
+      @include flex(start, center);
+   }
+
+   &__body {
+      width: 44.75%;
+   }
+
+   &__img {
+      width: 44.75%;
+      background: $grey;
+      padding: 4.5em 4rem 4.5rem 4.5rem;
+      border-radius: 6px;
+   }
+   @media (max-width: $smallLaptop) {
+      &__body,
+      &__img {
+         width: 50%;
+      }
+      &__img {
+         padding: 2.5em 2em 2.5em 2.5em;
+      }
+   }
+   @media (max-width: $tablet) {
+      &__container {
+         flex-direction: column;
+      }
+      &__body,
+      &__img {
+         width: 100%;
+      }
+      &__body {
+         padding: 0 0 2em 0;
+      }
+   }
+   @media (max-width: $bigPhone) {
+      &__container {
+         padding-top: 25px;
+         padding-bottom: 25px;
+      }
+      &__img {
+         padding: 1em;
+      }
+   }
+}
+
+.body-product {
+   div {
+      padding-right: 8em;
+   }
+
+   &__text {
+      padding: 1.9em 0;
+      p {
+         font-style: normal;
+         font-weight: 400;
+         line-height: 26px/18px * 100%;
+         color: $primary;
+         span {
+            text-decoration: underline;
+         }
+      }
+   }
+
+   &__box {
+      a {
+         @include main-button(0.89em, 1.4em);
+         white-space: nowrap;
+      }
+   }
+   @media (max-width: $smallLaptop) {
+      div {
+         padding-right: 4em;
+      }
+   }
+   @media (max-width: $smallLaptop) {
+      div {
+         padding-right: 0;
+      }
+      &__text {
+         padding: 1em 0;
+      }
+   }
+}
+
+.img-product {
+   &__header {
+      padding: 2.2rem 4rem 2.2rem 0;
+      h1 {
+         font-weight: 400;
+         font-size: 1.78rem;
+         line-height: 34px;
+         color: $secondary;
+      }
+   }
+   &__box {
+      padding: 2em 0 0 0;
+      @include flex(start, flex-end);
+      a {
+         font-weight: 700;
+         font-size: 1rem;
+         line-height: 36px/18px * 100%;
+         color: $secondary;
+         @media (min-width: $tablet) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+   @media (max-width: $tablet) {
+      &__header {
+         padding: 1em 0;
+      }
+   }
 }
