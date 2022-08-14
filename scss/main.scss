@@ -292,21 +292,23 @@
    &__box {
       padding: 2em 0 0 0;
       @include flex(start, flex-end);
-      a {
-         font-weight: 700;
-         font-size: 1rem;
-         line-height: 36px/18px * 100%;
-         color: $secondary;
-         @media (min-width: $tablet) {
-            &:hover {
-               text-decoration: underline;
-            }
-         }
-      }
    }
    @media (max-width: $tablet) {
       &__header {
          padding: 1em 0;
+      }
+   }
+}
+.learn {
+   font-weight: 700;
+   font-size: 1rem;
+   line-height: 36px/18px * 100%;
+   color: $secondary;
+   text-transform: capitalize;
+
+   @media (min-width: $tablet) {
+      &:hover {
+         text-decoration: underline;
       }
    }
 }
@@ -371,4 +373,152 @@
    @media (max-width: $biggestTablet) {
       padding: 75px 0;
    }
+}
+
+// Контент сайта Difference //
+.difference {
+   width: 100%;
+   background: #fff;
+   position: relative;
+   &__container {
+      @include flex(center, center);
+      padding-top: 150px;
+      padding-bottom: 150px;
+      @media (max-width: $smallLaptop) {
+         padding-top: 100px;
+         padding-bottom: 100px;
+      }
+      @media (max-width: $tablet) {
+         padding-top: 75px;
+         padding-bottom: 75px;
+         flex-direction: column;
+         .difference__body,
+         .difference__popup {
+            width: 100%;
+         }
+      }
+   }
+
+   &__body {
+      width: 50%;
+   }
+
+   &__popup {
+      width: 50%;
+   }
+   @media (max-width: $smallLaptop) {
+   }
+}
+
+.body-difference {
+   padding: 0 12.5em 0 0;
+   &__header {
+      padding: 0 0 2.4em 0;
+   }
+
+   &__text {
+      p {
+         font-weight: 400;
+         font-size: 1rem;
+         line-height: 26px/18px * 100%;
+         color: #40494d;
+      }
+   }
+
+   ul {
+      padding: 1.35em 0;
+      list-style: none;
+   }
+
+   li {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: $primary;
+      padding: 0 0 0 1.9em;
+      &.caption {
+         font-weight: 400;
+         font-size: 11px;
+         line-height: 14px/11px * 100%;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         color: $secondary;
+         padding: 0 0 1.3em;
+      }
+   }
+
+   @media (max-width: $smallLaptop) {
+      padding: 0 4.5em 0 0;
+   }
+   @media (max-width: $tablet) {
+      padding: 0 0 2em 0;
+      &__header {
+         padding: 0 0 1.2em 0;
+      }
+   }
+}
+
+.popup-difference {
+   position: relative;
+   img {
+      width: 100%;
+      display: block;
+   }
+   &__controls {
+      background: $blue-grey;
+      opacity: 0.8;
+      width: 8rem;
+      height: 8rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      @include flex(center, center);
+   }
+
+   &__play {
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 30px solid #fff;
+      opacity: 1;
+   }
+}
+.popup-block {
+   width: 100%;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   background: #000000;
+   z-index: 3;
+   display: none;
+   video {
+      transform: translate(0, -50%);
+      width: 640px;
+      height: 360px;
+      @media (max-width: $tablet) {
+         width: 100%;
+         height: auto;
+      }
+   }
+   &__body {
+      min-height: 100vh;
+      @include flex(center, center);
+   }
+   &.open_ {
+      display: block;
+      video {
+         transform: translate(0, 0);
+      }
+   }
+}
+
+.cross {
+   position: absolute;
+   border: 1px solid #fff;
+   bottom: 0;
+   height: 20px;
+   width: 20px;
+   background: #000;
 }

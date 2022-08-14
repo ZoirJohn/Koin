@@ -63,3 +63,14 @@ function windowLoad() {
       });
    }
 }
+
+const popupCaller = document.querySelector('.popup-difference__controls');
+const popup = document.querySelector('.popup-block');
+const openPopup = function (e) {
+   e.preventDefault();
+   if (popup && popupCaller) {
+      popup.classList.toggle('open_');
+      // body.classList.toggle('lock_');
+   }
+};
+popupCaller.addEventListener('click', openPopup);
