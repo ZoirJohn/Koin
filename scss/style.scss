@@ -19,13 +19,14 @@ body,
    height: 100%;
    font-family: 'Manrope', sans-serif;
 }
-.body.lock_ {
+body.lock_ {
    overflow: hidden;
 }
 .wrapper {
    min-height: 100vh;
    display: flex;
    flex-direction: column;
+   overflow: hidden !important;
 }
 
 .container {
@@ -36,18 +37,18 @@ body,
 }
 
 ::-webkit-scrollbar {
-	background: #f3f7f4;
-	width: 10px;
+   background: #f3f7f4;
+   width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: $primary;
-	border-radius: 50px;
+   background: $primary;
+   border-radius: 50px;
 }
 
 *::selection {
-	background: $primary;
-	color: #fff;
+   background: $primary;
+   color: #fff;
 }
 
 @import 'header.scss';

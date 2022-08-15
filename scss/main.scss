@@ -2,6 +2,7 @@
 .main {
    flex: 1 0 auto;
    margin: 120px 0 0 0;
+
    @media (max-width: $tablet) {
       margin: 70px 0 0 0;
    }
@@ -11,6 +12,7 @@
 .poster {
    width: 100%;
    background: $grey;
+
    &__container {
       position: relative;
       @include flex(start, space-between);
@@ -21,27 +23,34 @@
       padding: 270px 0;
       position: relative;
       z-index: 2;
+
       @media (max-width: 1200px) {
          width: 50%;
       }
+
       @media (max-width: $biggestTablet) {
          width: 62.2%;
          padding: 135px 0;
       }
+
       @media (max-width: 670px) {
          width: 87%;
          padding: 135px 0;
+
          h1 {
             font-size: 2.8rem;
          }
       }
+
       @media (max-width: $bigPhone) {
          width: 100%;
          padding: 135px 0;
+
          h1 {
             font-size: 3.1rem;
          }
       }
+
       @media (max-width: $mediumPhone) {
          h1 {
             font-size: 2.3rem;
@@ -51,16 +60,19 @@
 
    &__img {
       padding: 180px 140px 0 0;
+
       div {
          &:not(:first-child) {
             position: absolute;
          }
+
          @media (max-width: $bigPhone) {
             &:not(:first-child) {
                display: none;
             }
          }
       }
+
       .decor-img {
          @media (max-width: $biggestTablet) {
             position: absolute;
@@ -68,26 +80,32 @@
             top: 0;
          }
       }
+
       .decor-1 {
          top: 37%;
          right: 3%;
       }
+
       .decor-2 {
          top: 68%;
          right: 20%;
       }
+
       .decor-3 {
          top: 39%;
          right: 38%;
+
          @media (max-width: 620px) {
             left: 5% !important;
          }
       }
+
       @media (max-width: $biggestTablet) {
          position: absolute;
          right: 0;
          width: 100%;
          height: 100%;
+
          &::before {
             content: '';
             width: 100%;
@@ -98,9 +116,11 @@
             top: 0;
             z-index: 1;
          }
+
          .decor-2 {
             right: 20%;
          }
+
          .decor-3 {
             left: 10%;
          }
@@ -116,17 +136,21 @@
    letter-spacing: 1px;
    color: #283337;
 }
+
 .body-poster {
    &__text {
       padding: 45px 5em 25px 0;
+
       p {
          font-weight: 400;
          font-size: 1.16rem;
          line-height: 1.47em;
          color: $primary;
       }
+
       @media (max-width: 375px) {
          padding: 25px 0;
+
          p {
             font-size: 1rem;
          }
@@ -148,12 +172,15 @@
    &__body {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
+
       @media (max-width: 768px) {
          grid-template-columns: repeat(3, 1fr);
       }
+
       @media (max-width: 425px) {
          grid-template-columns: repeat(2, 1fr);
       }
+
       @media (max-width: 375px) {
          grid-template-columns: 1fr;
       }
@@ -162,12 +189,14 @@
    &__icon {
       width: 100%;
       height: 200px;
+
       @media (max-width: 768px) {
          height: 100px;
          background-size: auto 100%;
       }
    }
 }
+
 #i-1 {
    background: url(../img/poster/icons/poster-icon_2.svg) center/ calc(100 / 244 * 100%) 100px no-repeat;
 }
@@ -208,32 +237,39 @@
       padding: 4.5em 4rem 4.5rem 4.5rem;
       border-radius: 6px;
    }
+
    @media (max-width: $smallLaptop) {
       &__body,
       &__img {
          width: 50%;
       }
+
       &__img {
          padding: 2.5em 2em 2.5em 2.5em;
       }
    }
+
    @media (max-width: $tablet) {
       &__container {
          flex-direction: column;
       }
+
       &__body,
       &__img {
          width: 100%;
       }
+
       &__body {
          padding: 0 0 2em 0;
       }
    }
+
    @media (max-width: $bigPhone) {
       &__container {
          padding-top: 25px;
          padding-bottom: 25px;
       }
+
       &__img {
          padding: 1em;
       }
@@ -247,11 +283,13 @@
 
    &__text {
       padding: 1.9em 0;
+
       p {
          font-style: normal;
          font-weight: 400;
          line-height: 26px/18px * 100%;
          color: $primary;
+
          span {
             text-decoration: underline;
          }
@@ -264,15 +302,18 @@
          white-space: nowrap;
       }
    }
+
    @media (max-width: $smallLaptop) {
       div {
          padding-right: 4em;
       }
    }
+
    @media (max-width: $smallLaptop) {
       div {
          padding-right: 0;
       }
+
       &__text {
          padding: 1em 0;
       }
@@ -282,6 +323,7 @@
 .img-product {
    &__header {
       padding: 2.2rem 4rem 2.2rem 0;
+
       h1 {
          font-weight: 400;
          font-size: 1.78rem;
@@ -289,16 +331,19 @@
          color: $secondary;
       }
    }
+
    &__box {
       padding: 2em 0 0 0;
       @include flex(start, flex-end);
    }
+
    @media (max-width: $tablet) {
       &__header {
          padding: 1em 0;
       }
    }
 }
+
 .learn {
    font-weight: 700;
    font-size: 1rem;
@@ -317,17 +362,21 @@
 .results {
    background: $grey;
    padding: 150px 0 70px;
+
    &__container {
       width: 100%;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+
       > div {
          text-align: center;
       }
+
       @media (max-width: $tablet) {
          grid-template-columns: repeat(2, 1fr);
          justify-self: center;
       }
+
       @media (max-width: $bigPhone) {
          grid-template-columns: 1fr;
       }
@@ -335,9 +384,11 @@
 
    &__header {
       grid-column: 1 / span 3;
+
       @media (max-width: $tablet) {
          grid-column: 1 / span 2;
       }
+
       @media (max-width: $bigPhone) {
          grid-column: 1/2;
       }
@@ -345,6 +396,7 @@
 
    &__square {
       padding: 80px 0;
+
       h1 {
          font-weight: 400;
          font-size: 2.8rem;
@@ -352,6 +404,7 @@
          color: $secondary;
          padding: 0 0 0.4em 0;
       }
+
       p {
          font-weight: 400;
          font-size: 16px;
@@ -360,16 +413,20 @@
          width: 51%;
          margin: 0 auto;
       }
+
       @media (max-width: $biggestTablet) {
          padding: 40px 20px 0;
+
          p {
             width: 100%;
          }
       }
    }
+
    @media (max-width: $smallLaptop) {
       padding: 100px 0;
    }
+
    @media (max-width: $biggestTablet) {
       padding: 75px 0;
    }
@@ -380,18 +437,22 @@
    width: 100%;
    background: #fff;
    position: relative;
+
    &__container {
       @include flex(center, center);
       padding-top: 150px;
       padding-bottom: 150px;
+
       @media (max-width: $smallLaptop) {
          padding-top: 100px;
          padding-bottom: 100px;
       }
+
       @media (max-width: $tablet) {
          padding-top: 75px;
          padding-bottom: 75px;
          flex-direction: column;
+
          .difference__body,
          .difference__popup {
             width: 100%;
@@ -406,12 +467,14 @@
    &__popup {
       width: 50%;
    }
+
    @media (max-width: $smallLaptop) {
    }
 }
 
 .body-difference {
    padding: 0 12.5em 0 0;
+
    &__header {
       padding: 0 0 2.4em 0;
    }
@@ -436,6 +499,7 @@
       line-height: 26px;
       color: $primary;
       padding: 0 0 0 1.9em;
+
       &.caption {
          font-weight: 400;
          font-size: 11px;
@@ -450,20 +514,23 @@
    @media (max-width: $smallLaptop) {
       padding: 0 4.5em 0 0;
    }
+
    @media (max-width: $tablet) {
       padding: 0 0 2em 0;
+
       &__header {
          padding: 0 0 1.2em 0;
       }
    }
 }
-
 .popup-difference {
    position: relative;
+
    img {
       width: 100%;
       display: block;
    }
+
    &__controls {
       background: $blue-grey;
       opacity: 0.8;
@@ -484,41 +551,73 @@
       opacity: 1;
    }
 }
+
+//============ Popup ============//
 .popup-block {
    width: 100%;
-   position: absolute;
+   min-height: 100vh;
+   background: #000000ee;
+   z-index: 5;
+   @include flex(center, center);
+   transition: all 800ms ease-in-out;
+   opacity: 0;
+   visibility: hidden;
+   position: fixed;
    top: 0;
-   bottom: 0;
    left: 0;
-   background: #000000;
-   z-index: 3;
-   display: none;
-   video {
-      transform: translate(0, -50%);
-      width: 640px;
-      height: 360px;
-      @media (max-width: $tablet) {
-         width: 100%;
-         height: auto;
+   &.open_ {
+      top: 0;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      overflow: hidden;
+      video {
+         transform: translate(0, 0);
       }
    }
    &__body {
-      min-height: 100vh;
-      @include flex(center, center);
+      display: inline-block;
+		@media (max-width: $tablet) {
+			padding: 0 15px;
+		}
    }
-   &.open_ {
+   video {
+      width: 100%;
+      height: auto;
       display: block;
-      video {
-         transform: translate(0, 0);
+      transform: translate(0, -100%);
+      transition: all 800ms ease-in-out;
+      @media (min-width: $tablet) {
+         width: 640px;
+         height: 360px;
       }
    }
 }
 
 .cross {
    position: absolute;
-   border: 1px solid #fff;
-   bottom: 0;
-   height: 20px;
-   width: 20px;
-   background: #000;
+   top: 10px;
+   right: 10px;
+   height: 30px;
+   width: 30px;
+   flex-direction: column;
+   z-index: inherit;
+   cursor: pointer;
+   &:before,
+   &:after {
+      content: '';
+      position: absolute;
+      top: 45%;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: #fff;
+   }
+   &:before {
+      transform: rotate(45deg);
+   }
+   &:after {
+      transform: rotate(-45deg);
+   }
 }

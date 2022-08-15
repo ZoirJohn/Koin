@@ -1,4 +1,5 @@
 'use strict';
+// Burger
 const burger = document.querySelector('.burger');
 const body = document.querySelector('body');
 const menu = document.querySelector('.menu');
@@ -10,6 +11,7 @@ burger.addEventListener('click', function () {
    }
 });
 
+// Counter
 window.addEventListener('load', windowLoad);
 
 function windowLoad() {
@@ -64,13 +66,64 @@ function windowLoad() {
    }
 }
 
-const popupCaller = document.querySelector('.popup-difference__controls');
+// Popup
+const popupOpenButton = document.querySelector('.popup-difference__controls');
+const popupCloseButton = document.querySelector('.cross');
 const popup = document.querySelector('.popup-block');
-const openPopup = function (e) {
+
+popupOpenButton.addEventListener('click', popupOpen);
+popupCloseButton.addEventListener('click', popupClose);
+
+function popupOpen(e) {
    e.preventDefault();
-   if (popup && popupCaller) {
-      popup.classList.toggle('open_');
-      // body.classList.toggle('lock_');
+   if (popupOpenButton && popup) {
+      popup.classList.add('open_');
+      body.classList.add('lock_');
+      if (document.documentElement.clientWidth > 768) {
+         body.style.paddingRight = '10px';
+         burger.closest('.header').style.paddingRight = '10px';
+      }
    }
-};
-popupCaller.addEventListener('click', openPopup);
+}
+function popupClose() {
+   popup.classList.remove('open_');
+   body.classList.remove('lock_');
+   if (document.documentElement.clientWidth > 767) {
+      body.style.paddingRight = '0';
+      burger.closest('.header').style.paddingRight = '0';
+   }
+}
+
+// Lazy Loading
+const images = document.querySelectorAll('[data-src]');
+const windowHeight = document.documentElement.clientHeight;
+
+let imagesPositions = [];
+
+if (images.length > 0) {
+   images.forEach((img) => {
+      if (img.dataset.src) {
+         imagesPositions.push(img.getBoundingClientRect().top + scrollY+100);
+         loadImages();
+      }
+   });
+}
+
+window.addEventListener('scroll', scrollChecker);
+
+function scrollChecker() {
+   if (document.querySelectorAll('[data-src]')) {
+      loadImages();
+   }
+}
+
+function loadImages() {
+   let imgIndex = imagesPositions.findIndex((item) => scrollY > item - windowHeight);
+   if (imgIndex >= 0) {
+      if (images[imgIndex].dataset.src) {
+         images[imgIndex].src = images[imgIndex].dataset.src;
+         images[imgIndex].removeAttribute('data-src');
+      }
+      delete imagesPositions[imgIndex];
+   }
+}
