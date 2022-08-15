@@ -1,4 +1,12 @@
 'use strict';
+
+// Prevent Default
+const links = document.querySelectorAll('a');
+links.forEach((link) => link.addEventListener('click', preventDefault));
+function preventDefault(e) {
+   e.preventDefault();
+}
+
 // Burger
 const burger = document.querySelector('.burger');
 const body = document.querySelector('body');
@@ -103,7 +111,7 @@ let imagesPositions = [];
 if (images.length > 0) {
    images.forEach((img) => {
       if (img.dataset.src) {
-         imagesPositions.push(img.getBoundingClientRect().top + scrollY+100);
+         imagesPositions.push(img.getBoundingClientRect().top + scrollY + 100);
          loadImages();
       }
    });

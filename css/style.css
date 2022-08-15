@@ -437,7 +437,7 @@ body.lock_ {
 
 .header-block {
   font-family: "Times New Roman";
-  font-weight: 400;
+  font-weight: 700;
   font-size: 3.3rem;
   line-height: 1em;
   letter-spacing: 1px;
@@ -919,35 +919,20 @@ body.lock_ {
   width: 100%;
 }
 .built__square {
-  height: 100%;
-}
-@media (max-width: 767px) {
-  .built__square {
-    padding: 50px 0;
-  }
-}
-@media (max-width: 425px) {
-  .built__square {
-    background-size: 60% !important;
-  }
-}
-@media (max-width: 375px) {
-  .built__square {
-    background-size: 50% !important;
-    padding: 60px 0;
-  }
+  min-height: 100px;
+  width: 100%;
 }
 .built .caption {
   text-align: center;
 }
 .built #b-1 {
-  background: url(../img/built/b-1.png) center/auto no-repeat;
+  background: url(../img/built/b-1.png) center/46.5053763441% no-repeat;
 }
 .built #b-2 {
-  background: url(../img/built/b-2.png) center/auto no-repeat;
+  background: url(../img/built/b-2.png) center/29.0322580645% auto no-repeat;
 }
 .built #b-3 {
-  background: url(../img/built/b-3.png) center/auto no-repeat;
+  background: url(../img/built/b-3.png) center/50% auto no-repeat;
 }
 .built__body {
   padding: 60px 0 0 0;
@@ -958,10 +943,80 @@ body.lock_ {
 @media (max-width: 767px) {
   .built__body {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
   }
 }
 @media (max-width: 375px) {
   .built__body {
     grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .built__container {
+    padding: 0 0 150px 0;
+  }
+}
+@media (max-width: 375px) {
+  .built__container {
+    padding: 0 0 300px 0;
+  }
+}
+
+.start {
+  width: 100%;
+  background: #f3f7f4;
+}
+.start__container {
+  padding: 150px 0;
+}
+@media (max-width: 767px) {
+  .start__container {
+    padding: 100px 0;
+  }
+}
+@media (max-width: 425px) {
+  .start__container {
+    padding: 75px 0;
+  }
+}
+.start__caption {
+  text-align: center;
+}
+.start__caption h1 {
+  width: 50%;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .start__caption h1 {
+    width: 100%;
+  }
+}
+.start__text {
+  text-align: center;
+  padding: 2.7em 0;
+}
+.start__text p {
+  font-weight: 400;
+  font-size: 1.83rem;
+  line-height: 109.0909090909%;
+  color: #283337;
+}
+.start__box {
+  text-align: center;
+}
+.start__box a {
+  display: inline-block;
+  font-size: 1rem;
+  color: #fff;
+  background: #283337;
+  border-radius: 56px;
+  padding: 16px 43px;
+  transition: background-color 300ms ease-in, color 200ms ease-in;
+}
+@media (min-width: 767px) {
+  .start__box a:hover {
+    color: #283337;
+    background: #61d7ac;
   }
 }

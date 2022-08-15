@@ -55,11 +55,11 @@
                         <a href="#">Request Demo</a>
                      </div>
                   </div>
-                  <div class="poster__img">
+                  <div class="poster__img" id="scene" data-hover-only="true" data-relative-input="true">
                      <div class="decor-img"><img src="img/data-img.bmp" data-src="img/poster/poster-img.png" alt="Фон" /></div>
-                     <div class="decor-1"><img src="img/data-img.bmp" data-src="img/poster/decor-1.png" alt="" /></div>
-                     <div class="decor-2"><img src="img/data-img.bmp" data-src="img/poster/decor-2.png" alt="" /></div>
-                     <div class="decor-3"><img src="img/data-img.bmp" data-src="img/poster/decor-3.png" alt="" /></div>
+                     <div class="decor-1" data-depth="0.6"><img src="img/data-img.bmp" data-src="img/poster/decor-1.png" alt="" /></div>
+                     <div class="decor-2" data-depth="0.8"><img src="img/data-img.bmp" data-src="img/poster/decor-2.png" alt="" /></div>
+                     <div class="decor-3" data-depth="1.0"><img src="img/data-img.bmp" data-src="img/poster/decor-3.png" alt="" /></div>
                   </div>
                </div>
                <div class="container poster-icons__container">
@@ -157,9 +157,9 @@
             </section>
             <section class="built">
                <div class="built__container container">
-						<div class="caption">
-							<h1 class="header-block">Built For</h1>
-						</div>
+                  <div class="caption">
+                     <h1 class="header-block">Built For</h1>
+                  </div>
                   <div class="built__body">
                      <div class="built__square" id="b-1"></div>
                      <div class="built__square" id="b-2"></div>
@@ -167,10 +167,24 @@
                   </div>
                </div>
             </section>
+            <section class="start">
+               <div class="start__container container">
+                  <div class="start__caption">
+                     <h1 class="header-block">Start your cloud enablement journey.</h1>
+                  </div>
+						<div class="start__text">
+							<p>Request a demo today,</p>
+						</div>
+						<div class="start__box">
+							<a href="#">Request Demo</a>
+						</div>
+               </div>
+            </section>
          </main>
       </div>
 
       <script src="js/dynamicAdapt.js"></script>
+		<script src="js/parallax.js"></script>
       <script src="js/script.js"></script>
    </body>
 </html>

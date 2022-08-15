@@ -130,7 +130,7 @@
 
 .header-block {
    font-family: 'Times New Roman';
-   font-weight: 400;
+   font-weight: 700;
    font-size: 3.3rem;
    line-height: 1em;
    letter-spacing: 1px;
@@ -627,17 +627,8 @@
    width: 100%;
 
    &__square {
-      height: 100%;
-      @media (max-width: $tablet) {
-         padding: 50px 0;
-      }
-      @media (max-width: $bigPhone) {
-         background-size: 60% !important;
-      }
-      @media (max-width: $mediumPhone) {
-         background-size: 50% !important;
-			padding: 60px 0;
-      }
+      min-height: 100px;
+      width: 100%;
    }
 
    .caption {
@@ -645,13 +636,13 @@
    }
 
    #b-1 {
-      background: url(../img/built/b-1.png) center / auto no-repeat;
+      background: url(../img/built/b-1.png) center / calc(173 / 372 * 100%) no-repeat;
    }
    #b-2 {
-      background: url(../img/built/b-2.png) center / auto no-repeat;
+      background: url(../img/built/b-2.png) center / calc(108 / 372 * 100%) auto no-repeat;
    }
    #b-3 {
-      background: url(../img/built/b-3.png) center / auto no-repeat;
+      background: url(../img/built/b-3.png) center / calc(186 / 372 * 100%) auto no-repeat;
    }
 
    &__body {
@@ -661,9 +652,63 @@
       grid-template-columns: repeat(3, 1fr);
       @media (max-width: $tablet) {
          grid-template-columns: repeat(2, 1fr);
+         gap: 20px 0;
       }
       @media (max-width: $mediumPhone) {
          grid-template-columns: 1fr;
+         width: 100%;
+      }
+   }
+	&__container{
+		@media (max-width: $tablet) {
+			padding: 0 0 150px 0;
+		}	
+		@media (max-width: $mediumPhone) {
+			padding: 0 0 300px 0;
+		}	
+	}
+}
+
+// Контент сайта Start //
+.start {
+   width: 100%;
+   background: $grey;
+   &__container {
+      padding: 150px 0;
+		@media (max-width: $tablet) {
+			padding: 100px 0;
+		}
+		@media (max-width: $bigPhone) {
+			padding: 75px 0;
+		}
+   }
+
+   &__caption {
+      text-align: center;
+      h1 {
+         width: 50%;
+         margin: 0 auto;
+         @media (max-width: $tablet) {
+            width: 100%;
+         }
+      }
+   }
+
+   &__text {
+      text-align: center;
+      padding: 2.7em 0;
+      p {
+         font-weight: 400;
+         font-size: 1.83rem;
+         line-height: 36px/33px * 100%;
+         color: $secondary;
+      }
+   }
+
+   &__box {
+      text-align: center;
+      a {
+         @include main-button(16px, 43px);
       }
    }
 }
