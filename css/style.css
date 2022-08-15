@@ -914,3 +914,54 @@ body.lock_ {
 .cross:after {
   transform: rotate(-45deg);
 }
+
+.built {
+  width: 100%;
+}
+.built__square {
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .built__square {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 425px) {
+  .built__square {
+    background-size: 60% !important;
+  }
+}
+@media (max-width: 375px) {
+  .built__square {
+    background-size: 50% !important;
+    padding: 60px 0;
+  }
+}
+.built .caption {
+  text-align: center;
+}
+.built #b-1 {
+  background: url(../img/built/b-1.png) center/auto no-repeat;
+}
+.built #b-2 {
+  background: url(../img/built/b-2.png) center/auto no-repeat;
+}
+.built #b-3 {
+  background: url(../img/built/b-3.png) center/auto no-repeat;
+}
+.built__body {
+  padding: 60px 0 0 0;
+  height: 160px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 767px) {
+  .built__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 375px) {
+  .built__body {
+    grid-template-columns: 1fr;
+  }
+}
