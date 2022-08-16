@@ -1,0 +1,196 @@
+.footer {
+   width: 100%;
+   background: #101c21;
+   padding: 100px 0 35px 0;
+   position: relative;
+   &__description {
+   }
+
+   &__resources {
+   }
+
+   &__support {
+   }
+
+   &__about {
+   }
+
+   &__links {
+   }
+   @media (max-width: $tablet) {
+      padding-top: 50px;
+   }
+}
+
+// 1/2 Часть футера
+.description-footer {
+   @include flex(start, space-between);
+   &__box-text {
+      flex: 0 0 44%;
+      @include flex(start, space-between);
+      flex-direction: column;
+      ul {
+         list-style-type: none;
+         &:nth-child(2) {
+            padding: 15px 0 30px;
+         }
+         a {
+            font-weight: 400;
+            font-size: 0.89rem;
+            line-height: 18px/16px * 100%;
+            color: #cfd2d3;
+         }
+         li {
+            padding: 0 0 0.67em 0;
+         }
+      }
+      .button {
+         margin: 45px 0 0 0;
+         font-size: 1rem;
+         @include footer-button(0.89em, 1.8em);
+      }
+   }
+
+   &__resources {
+      flex: 1 1 auto;
+      ul {
+         list-style: none;
+      }
+   }
+
+   @media (max-width: $tablet) {
+      // align-items: center;
+      flex-direction: column;
+      &__resources {
+         // flex: 1 1 100%;
+         width: 100%;
+         padding: 5em 0;
+         img[alt='Логотип'] {
+            position: absolute;
+            top: 50px;
+            right: 15px;
+         }
+      }
+   }
+}
+
+.top__resources {
+   @include flex(start, space-between);
+   .footer-header {
+      margin: 0 0 1.05em 0;
+   }
+   li {
+      &:not(.footer-header) {
+         padding: 0 0 0.67em 0;
+         font-weight: 400;
+         line-height: 16px/14px * 100%;
+      }
+      a {
+         color: #fff;
+         font-size: 0.78rem;
+      }
+   }
+   @media (max-width: $mediumPhone) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      ul {
+         padding: 30px 0;
+         li,
+         a {
+            font-size: 1.2rem;
+         }
+         li {
+            &:not(.footer-header) {
+               padding: 0 0 1em 0;
+            }
+         }
+      }
+   }
+}
+
+.bottom__resources {
+   padding: 3em 0 0 0;
+   h4 {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 22px/18px * 100%;
+      color: #ffffff;
+      padding: 0 0 1.67em 0;
+   }
+   form {
+      @include flex(center, start);
+      position: relative;
+      input {
+         font-size: 0.8333333333rem;
+         width: 68%;
+         border-radius: 4px;
+         outline: none;
+         border: none;
+         padding: 1em 0 1.466666em 2.6em;
+         &:focus {
+            box-shadow: 0 0 10px #fff;
+         }
+         &.error_ {
+            box-shadow: 0 0 50px #ff0000;
+         }
+         &.right_ {
+            box-shadow: 0 0 50px #00ff00;
+         }
+      }
+      .placeholder {
+         position: absolute;
+         left: 36px;
+         top: 25%;
+         color: #878d90;
+         font-size: 1rem;
+         // transition: top 400ms ease-out, font-size 0 ease-out 400ms;
+         transition: all 400ms ease-out;
+         &.toTop_ {
+            top: -25%;
+            font-size: 0.5rem;
+         }
+      }
+      button {
+         font-size: 0.8333rem;
+         @include footer-button(1.09em, 2.5em);
+         border: none;
+         font-family: 'Manrope';
+         margin: 0 0 0 1.5em;
+      }
+      @media (max-width: $bigPhone) {
+         button {
+            padding: 0.9em 1.5em;
+            margin: 0 0 0 0.5em;
+         }
+         input {
+            padding: 0.5em 0 0.7333em 1.3em;
+            font-size: 1rem;
+         }
+         .placeholder {
+            left: 12px;
+            top: 18%;
+         }
+      }
+   }
+}
+
+// 2/2 Часть футера
+.links-footer {
+   &__icon-links {
+   }
+
+   &__links {
+   }
+
+   &__copyright {
+   }
+}
+
+.footer-header {
+   font-weight: 400;
+   font-size: 0.89rem;
+   line-height: 18px/16px * 100%;
+   color: #878d90;
+   text-transform: capitalize;
+}

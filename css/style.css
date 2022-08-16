@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
 * {
   margin: 0;
@@ -336,7 +337,7 @@ body.lock_ {
   justify-content: space-between;
 }
 .poster__body {
-  width: 33.6%;
+  width: 33.8%;
   padding: 270px 0;
   position: relative;
   z-index: 2;
@@ -1019,4 +1020,205 @@ body.lock_ {
     color: #283337;
     background: #61d7ac;
   }
+}
+
+.footer {
+  width: 100%;
+  background: #101c21;
+  padding: 100px 0 35px 0;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .footer {
+    padding-top: 50px;
+  }
+}
+
+.description-footer {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.description-footer__box-text {
+  flex: 0 0 44%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.description-footer__box-text ul {
+  list-style-type: none;
+}
+.description-footer__box-text ul:nth-child(2) {
+  padding: 15px 0 30px;
+}
+.description-footer__box-text ul a {
+  font-weight: 400;
+  font-size: 0.89rem;
+  line-height: 112.5%;
+  color: #cfd2d3;
+}
+.description-footer__box-text ul li {
+  padding: 0 0 0.67em 0;
+}
+.description-footer__box-text .button {
+  margin: 45px 0 0 0;
+  font-size: 1rem;
+  display: inline-block;
+  background: #283337;
+  border-radius: 56px;
+  font-weight: 700;
+  line-height: 116.6666666667%;
+  color: #fff;
+  padding: 0.89em 1.8em;
+  transition: all 400ms ease-in-out;
+}
+@media (min-width: 767px) {
+  .description-footer__box-text .button:hover {
+    background: #f3f7f4;
+    color: #283337;
+  }
+}
+.description-footer__resources {
+  flex: 1 1 auto;
+}
+.description-footer__resources ul {
+  list-style: none;
+}
+@media (max-width: 767px) {
+  .description-footer {
+    flex-direction: column;
+  }
+  .description-footer__resources {
+    width: 100%;
+    padding: 5em 0;
+  }
+  .description-footer__resources img[alt=Логотип] {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+  }
+}
+
+.top__resources {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.top__resources .footer-header {
+  margin: 0 0 1.05em 0;
+}
+.top__resources li:not(.footer-header) {
+  padding: 0 0 0.67em 0;
+  font-weight: 400;
+  line-height: 114.2857142857%;
+}
+.top__resources li a {
+  color: #fff;
+  font-size: 0.78rem;
+}
+@media (max-width: 375px) {
+  .top__resources {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .top__resources ul {
+    padding: 30px 0;
+  }
+  .top__resources ul li,
+.top__resources ul a {
+    font-size: 1.2rem;
+  }
+  .top__resources ul li:not(.footer-header) {
+    padding: 0 0 1em 0;
+  }
+}
+
+.bottom__resources {
+  padding: 3em 0 0 0;
+}
+.bottom__resources h4 {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 122.2222222222%;
+  color: #ffffff;
+  padding: 0 0 1.67em 0;
+}
+.bottom__resources form {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+}
+.bottom__resources form input {
+  font-size: 0.8333333333rem;
+  width: 68%;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding: 1em 0 1.466666em 2.6em;
+}
+.bottom__resources form input:focus {
+  box-shadow: 0 0 10px #fff;
+}
+.bottom__resources form input.error_ {
+  box-shadow: 0 0 50px #ff0000;
+}
+.bottom__resources form input.right_ {
+  box-shadow: 0 0 50px #00ff00;
+}
+.bottom__resources form .placeholder {
+  position: absolute;
+  left: 36px;
+  top: 25%;
+  color: #878d90;
+  font-size: 1rem;
+  transition: all 400ms ease-out;
+}
+.bottom__resources form .placeholder.toTop_ {
+  top: -25%;
+  font-size: 0.5rem;
+}
+.bottom__resources form button {
+  font-size: 0.8333rem;
+  display: inline-block;
+  background: #283337;
+  border-radius: 56px;
+  font-weight: 700;
+  line-height: 116.6666666667%;
+  color: #fff;
+  padding: 1.09em 2.5em;
+  transition: all 400ms ease-in-out;
+  border: none;
+  font-family: "Manrope";
+  margin: 0 0 0 1.5em;
+}
+@media (min-width: 767px) {
+  .bottom__resources form button:hover {
+    background: #f3f7f4;
+    color: #283337;
+  }
+}
+@media (max-width: 425px) {
+  .bottom__resources form button {
+    padding: 0.9em 1.5em;
+    margin: 0 0 0 0.5em;
+  }
+  .bottom__resources form input {
+    padding: 0.5em 0 0.7333em 1.3em;
+    font-size: 1rem;
+  }
+  .bottom__resources form .placeholder {
+    left: 12px;
+    top: 18%;
+  }
+}
+
+.footer-header {
+  font-weight: 400;
+  font-size: 0.89rem;
+  line-height: 112.5%;
+  color: #878d90;
+  text-transform: capitalize;
 }

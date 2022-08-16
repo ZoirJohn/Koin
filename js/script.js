@@ -1,13 +1,13 @@
 'use strict';
 
-// Prevent Default
+// ? Prevent Default
 const links = document.querySelectorAll('a');
 links.forEach((link) => link.addEventListener('click', preventDefault));
 function preventDefault(e) {
    e.preventDefault();
 }
 
-// Burger
+// ? Burger
 const burger = document.querySelector('.burger');
 const body = document.querySelector('body');
 const menu = document.querySelector('.menu');
@@ -19,7 +19,7 @@ burger.addEventListener('click', function () {
    }
 });
 
-// Counter
+// ? Counter
 window.addEventListener('load', windowLoad);
 
 function windowLoad() {
@@ -74,7 +74,7 @@ function windowLoad() {
    }
 }
 
-// Popup
+// ? Popup
 const popupOpenButton = document.querySelector('.popup-difference__controls');
 const popupCloseButton = document.querySelector('.cross');
 const popup = document.querySelector('.popup-block');
@@ -102,7 +102,7 @@ function popupClose() {
    }
 }
 
-// Lazy Loading
+// ? Lazy Loading
 const images = document.querySelectorAll('[data-src]');
 const windowHeight = document.documentElement.clientHeight;
 
@@ -133,5 +133,41 @@ function loadImages() {
          images[imgIndex].removeAttribute('data-src');
       }
       delete imagesPositions[imgIndex];
+   }
+}
+
+// ? Input Validator
+const input = document.getElementById('input-email');
+const button = document.getElementById('subscribe');
+const placeholder = document.querySelector('.placeholder');
+const footer = document.querySelector('.footer');
+
+input.addEventListener('focus', inputCheck);
+footer.addEventListener('click', focusOff);
+button.addEventListener('click', checkInputValue);
+
+function inputCheck(e) {
+   e.preventDefault();
+   placeholder.classList.add('toTop_');
+}
+function focusOff(e) {
+   const target = e.target;
+   if (target !== input && input.value === '') {
+      placeholder.classList.remove('toTop_');
+   }
+}
+function checkInputValue(e) {
+   e.preventDefault();
+   if (input.value && input.value.search('@') >= 0 && input.value.length >= 10) {
+      input.classList.add('right_');
+      input.value = '';
+      setTimeout(() => {
+         input.classList.remove('right_');
+      }, 5000);
+   } else {
+      input.classList.add('error_');
+      setTimeout(() => {
+         input.classList.remove('error_');
+      }, 5000);
    }
 }

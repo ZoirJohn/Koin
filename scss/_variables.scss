@@ -30,7 +30,7 @@ $foldPhone: 280px;
 }
 
 @mixin main-button($paddingForY, $paddingForX) {
-	display: inline-block;
+   display: inline-block;
    font-size: 1rem;
    color: #fff;
    background: $secondary;
@@ -41,6 +41,23 @@ $foldPhone: 280px;
       &:hover {
          color: #283337;
          background: #61d7ac;
+      }
+   }
+}
+
+@mixin footer-button($y, $x) {
+   display: inline-block;
+   background: #283337;
+   border-radius: 56px;
+   font-weight: 700;
+   line-height: 21px/18px * 100%;
+   color: #fff;
+   padding: $y $x;
+   transition: all 400ms ease-in-out;
+   @media (min-width: $tablet) {
+      &:hover {
+         background: $grey;
+         color: $secondary;
       }
    }
 }
