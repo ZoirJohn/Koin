@@ -953,6 +953,9 @@ body.lock_ {
     width: 100%;
   }
 }
+.built__container {
+  padding: 0 0 75px 0;
+}
 @media (max-width: 767px) {
   .built__container {
     padding: 0 0 150px 0;

@@ -84,16 +84,19 @@
       .decor-1 {
          top: 37%;
          right: 3%;
+			// transition: transform 700ms ease 50ms;
       }
 
       .decor-2 {
          top: 68%;
          right: 20%;
+			// transition: transform 600ms ease 50ms;
       }
 
       .decor-3 {
          top: 39%;
          right: 38%;
+			// transition: transform 500ms ease 50ms;
 
          @media (max-width: 620px) {
             left: 5% !important;
@@ -660,6 +663,7 @@
       }
    }
 	&__container{
+		padding: 0 0 75px 0;
 		@media (max-width: $tablet) {
 			padding: 0 0 150px 0;
 		}	
