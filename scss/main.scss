@@ -84,19 +84,19 @@
       .decor-1 {
          top: 37%;
          right: 3%;
-			// transition: transform 700ms ease 50ms;
+         // transition: transform 700ms ease 50ms;
       }
 
       .decor-2 {
          top: 68%;
          right: 20%;
-			// transition: transform 600ms ease 50ms;
+         // transition: transform 600ms ease 50ms;
       }
 
       .decor-3 {
          top: 39%;
          right: 38%;
-			// transition: transform 500ms ease 50ms;
+         // transition: transform 500ms ease 50ms;
 
          @media (max-width: 620px) {
             left: 5% !important;
@@ -218,6 +218,21 @@
 
 #i-5 {
    background: url(../img/poster/icons/poster-icon_1.svg) center/ calc(143 / 244 * 100%) 100px no-repeat;
+}
+.animItem {
+   opacity: 0;
+   transform: translate(0, 250px);
+   display: inline-block;
+   &.animate_ {
+      opacity: 1;
+      transform: translate(0, 0);
+   }
+}
+.anim-1 {
+	transition: all 800ms ease-out;
+}
+.anim-2 {
+	transition: all 800ms ease-out 300ms;
 }
 
 // Контент сайта Poster //
@@ -662,15 +677,15 @@
          width: 100%;
       }
    }
-	&__container{
-		padding: 0 0 75px 0;
-		@media (max-width: $tablet) {
-			padding: 0 0 150px 0;
-		}	
-		@media (max-width: $mediumPhone) {
-			padding: 0 0 300px 0;
-		}	
-	}
+   &__container {
+      padding: 0 0 75px 0;
+      @media (max-width: $tablet) {
+         padding: 0 0 150px 0;
+      }
+      @media (max-width: $mediumPhone) {
+         padding: 0 0 300px 0;
+      }
+   }
 }
 
 // Контент сайта Start //
@@ -679,12 +694,12 @@
    background: $grey;
    &__container {
       padding: 150px 0;
-		@media (max-width: $tablet) {
-			padding: 100px 0;
-		}
-		@media (max-width: $bigPhone) {
-			padding: 75px 0;
-		}
+      @media (max-width: $tablet) {
+         padding: 100px 0;
+      }
+      @media (max-width: $bigPhone) {
+         padding: 75px 0;
+      }
    }
 
    &__caption {

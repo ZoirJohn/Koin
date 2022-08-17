@@ -1,5 +1,5 @@
 'use strict';
-
+console.clear();
 // ? Prevent Default
 const links = document.querySelectorAll('a');
 links.forEach((link) => link.addEventListener('click', preventDefault));
@@ -124,7 +124,6 @@ function scrollChecker() {
       loadImages();
    }
 }
-
 function loadImages() {
    let imgIndex = imagesPositions.findIndex((item) => scrollY > item - windowHeight);
    if (imgIndex >= 0) {
@@ -177,28 +176,53 @@ const poster = document.querySelector('.poster');
 const decors = document.querySelectorAll('[class*="decor-"]:not(.decor-img)');
 const decor = document.querySelector('[class*="decor-"]:not(.decor-img)');
 
-// window.addEventListener('scroll', parallax);
 poster.addEventListener('mousemove', parallaxOnHover);
 
-// function parallax() {
-//    if (window.screenY >= poster.getBoundingClientRect().bottom) {
-//       decors.forEach((decor) => {
-//          decor.style.transform = `translate(0,0)`;
-//       });
-//    }
-//    decors.forEach((decor) => {
-//       const array = decor.className.split('');
-//       decor.style.transform = `translate(0,${window.scrollY * array[array.length - 1] * 0.1}px`;
-//    });
-// }
-
 function parallaxOnHover(e) {
-	const x = e.clientX;
-	const y = e.clientY;
-	decors.forEach((decor) => {
-		const array = decor.className.split('');
-		decor.style.transitionDelay = '0';
-		decor.style.transition = `all ${250 * array[array.length - 1]}ms ease-out`;
-      decor.style.transform = `translate(${-x*0.15}px,${-y*0.2}px`;
+   const x = e.clientX;
+   const y = e.clientY;
+   decors.forEach((decor) => {
+      const array = decor.className.split('');
+      decor.style.transitionDelay = '0';
+      decor.style.transition = `all ${300 * array[array.length - 1]}ms ease-out`;
+      decor.style.transform = `translate(${-x * 0.15}px,${-y * 0.3}px`;
    });
 }
+
+// ? Animate Items 1/2
+const animItems = document.querySelectorAll('.animItem');
+window.addEventListener('scroll', animating);
+
+function animating() {
+   animItems.forEach((anim) => {
+      const parentElement = anim.closest('section');
+      if (parentElement.getBoundingClientRect().top - 400 <= 0) {
+         anim.classList.add('animate_');
+      }
+   });
+}
+animating();
+
+// ? Animate Items 2/2
+const lists = document.querySelectorAll('.footer .description-footer__resources ul');
+if (lists.length >= 0) {
+   let n = 1;
+
+   lists.forEach((list) => {
+      list.style.transform = `translate(200px,0)`;
+      list.style.opacity = '0';
+      list.style.transition = `all ${n++ * 350}ms ease-out`;
+   });
+}
+window.addEventListener('scroll', footerAnimate);
+
+function footerAnimate() {
+   lists.forEach((list) => {
+      const footer = list.closest('.footer');
+      if (footer.getBoundingClientRect().top - 250 <= 0) {
+         list.style.transform = `translate(0,0)`;
+         list.style.opacity = '1';
+      }
+   });
+}
+footerAnimate();

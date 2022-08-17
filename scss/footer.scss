@@ -177,13 +177,40 @@
 
 // 2/2 Часть футера
 .links-footer {
+   // border: 1px solid #000;
+   padding: 3em 0 0 0;
+   @include flex(center, space-between);
    &__icon-links {
+      @include flex(center, space-between);
+      flex: 0 0 10%;
+      a {
+         transition: all 400ms ease;
+         padding: 0 0.4em;
+         &:hover {
+            transform: translate(0, -5px);
+         }
+      }
    }
 
    &__links {
+      @include flex(center, space-between);
+      flex: 0 0 30%;
+		gap: 20px;
    }
-
-   &__copyright {
+   a {
+      white-space: nowrap;
+   }
+   a,
+   p {
+      color: #fff;
+      font-size: 0.9rem;
+   }
+   @media (max-width: $biggestTablet) {
+      flex-wrap: wrap;
+      gap: 40px;
+      &__copyright {
+         flex: 0 1 100%;
+      }
    }
 }
 
