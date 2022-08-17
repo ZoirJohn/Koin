@@ -3,20 +3,20 @@
    background: #101c21;
    padding: 100px 0 35px 0;
    position: relative;
-   &__description {
-   }
+   // &__description {
+   // }
 
-   &__resources {
-   }
+   // &__resources {
+   // }
 
-   &__support {
-   }
+   // &__support {
+   // }
 
-   &__about {
-   }
+   // &__about {
+   // }
 
-   &__links {
-   }
+   // &__links {
+   // }
    @media (max-width: $tablet) {
       padding-top: 50px;
    }
@@ -177,7 +177,6 @@
 
 // 2/2 Часть футера
 .links-footer {
-   // border: 1px solid #000;
    padding: 3em 0 0 0;
    @include flex(center, space-between);
    &__icon-links {
@@ -193,9 +192,9 @@
    }
 
    &__links {
-      @include flex(center, space-between);
+      @include flex(center, center);
       flex: 0 0 30%;
-		gap: 20px;
+      gap: 20px;
    }
    a {
       white-space: nowrap;
@@ -207,7 +206,7 @@
    }
    @media (max-width: $biggestTablet) {
       flex-wrap: wrap;
-      gap: 40px;
+      gap: 20px;
       &__copyright {
          flex: 0 1 100%;
       }

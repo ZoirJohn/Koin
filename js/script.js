@@ -149,6 +149,10 @@ function inputCheck(e) {
    e.preventDefault();
    placeholder.classList.add('toTop_');
 }
+
+input.oninput = () => {
+   placeholder.classList.add('toTop_');
+};
 function focusOff(e) {
    const target = e.target;
    if (target !== input && input.value === '') {
@@ -162,12 +166,12 @@ function checkInputValue(e) {
       input.value = '';
       setTimeout(() => {
          input.classList.remove('right_');
-      }, 5000);
+      }, 1000);
    } else {
       input.classList.add('error_');
       setTimeout(() => {
          input.classList.remove('error_');
-      }, 5000);
+      }, 1000);
    }
 }
 
@@ -185,7 +189,7 @@ function parallaxOnHover(e) {
       const array = decor.className.split('');
       decor.style.transitionDelay = '0';
       decor.style.transition = `all ${300 * array[array.length - 1]}ms ease-out`;
-      decor.style.transform = `translate(${-x * 0.15}px,${-y * 0.3}px`;
+      decor.style.transform = `translate(${-x * 0.05}px,${-y * 0.09}px`;
    });
 }
 
@@ -219,7 +223,7 @@ window.addEventListener('scroll', footerAnimate);
 function footerAnimate() {
    lists.forEach((list) => {
       const footer = list.closest('.footer');
-      if (footer.getBoundingClientRect().top - 250 <= 0) {
+      if (footer.getBoundingClientRect().top - 150 <= 0) {
          list.style.transform = `translate(0,0)`;
          list.style.opacity = '1';
       }

@@ -1258,7 +1258,7 @@ body.lock_ {
 .links-footer__links {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex: 0 0 30%;
   gap: 20px;
 }
@@ -1273,7 +1273,7 @@ body.lock_ {
 @media (max-width: 992px) {
   .links-footer {
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
   }
   .links-footer__copyright {
     flex: 0 1 100%;
